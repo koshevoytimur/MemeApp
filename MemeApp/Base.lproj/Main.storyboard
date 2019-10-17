@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="dark"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MemeApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background_space" translatesAutoresizingMaskIntoConstraints="NO" id="mFA-mq-Jv6">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z6Z-IO-IEO">
+                                <rect key="frame" x="48" y="595" width="279" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="reF-jx-9IH"/>
+                                </constraints>
+                                <state key="normal" title="SHOW MEME">
+                                    <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="onButtonAction" destination="BYZ-38-t0r" eventType="touchUpInside" id="BxZ-Nn-kSt"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Top MemShower App v0.1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fbn-17-m3b">
+                                <rect key="frame" x="24" y="24" width="327" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="c60-n1-HCu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eI3-Go-8PS">
+                                <rect key="frame" x="24" y="111.5" width="327" height="444"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meme title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g69-Py-Ysa">
+                                        <rect key="frame" x="8" y="8" width="311" height="24"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="24" id="Eeb-Gu-hRj"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="c5O-QT-36A">
+                                        <rect key="frame" x="16" y="40" width="295" height="388"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="like" translatesAutoresizingMaskIntoConstraints="NO" id="WwK-b4-yt6">
+                                        <rect key="frame" x="64" y="122.5" width="199" height="199"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="WwK-b4-yt6" secondAttribute="height" multiplier="1:1" id="Xxw-ke-Z8B"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstItem="WwK-b4-yt6" firstAttribute="centerX" secondItem="eI3-Go-8PS" secondAttribute="centerX" id="2TF-z0-98a"/>
+                                    <constraint firstAttribute="height" constant="444" id="2U2-hK-7Aw"/>
+                                    <constraint firstItem="WwK-b4-yt6" firstAttribute="leading" secondItem="eI3-Go-8PS" secondAttribute="leading" constant="64" id="EkT-xP-hbv"/>
+                                    <constraint firstItem="g69-Py-Ysa" firstAttribute="leading" secondItem="eI3-Go-8PS" secondAttribute="leading" constant="8" id="Ixi-9i-sfZ"/>
+                                    <constraint firstAttribute="bottom" secondItem="c5O-QT-36A" secondAttribute="bottom" constant="16" id="IyP-54-Mlq"/>
+                                    <constraint firstAttribute="width" constant="327" id="J0c-7A-H3f"/>
+                                    <constraint firstAttribute="trailing" secondItem="WwK-b4-yt6" secondAttribute="trailing" constant="64" id="dFy-Yd-xSa"/>
+                                    <constraint firstItem="c5O-QT-36A" firstAttribute="top" secondItem="g69-Py-Ysa" secondAttribute="bottom" constant="8" id="jey-MK-WZV"/>
+                                    <constraint firstAttribute="trailing" secondItem="c5O-QT-36A" secondAttribute="trailing" constant="16" id="lsm-fd-GaZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="g69-Py-Ysa" secondAttribute="trailing" constant="8" id="lw5-js-qgX"/>
+                                    <constraint firstItem="c5O-QT-36A" firstAttribute="leading" secondItem="eI3-Go-8PS" secondAttribute="leading" constant="16" id="oIl-h4-8hW"/>
+                                    <constraint firstItem="g69-Py-Ysa" firstAttribute="top" secondItem="eI3-Go-8PS" secondAttribute="top" constant="8" id="sGa-ea-cKg"/>
+                                    <constraint firstItem="WwK-b4-yt6" firstAttribute="centerY" secondItem="eI3-Go-8PS" secondAttribute="centerY" id="zzg-Re-afb"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="4mn-0p-n7N" appends="YES" id="SBD-66-6kw"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mFA-mq-Jv6" secondAttribute="trailing" id="3ro-I1-amj"/>
+                            <constraint firstItem="Z6Z-IO-IEO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="48" id="64M-8b-hms"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Z6Z-IO-IEO" secondAttribute="trailing" constant="48" id="7B2-K8-mdC"/>
+                            <constraint firstItem="mFA-mq-Jv6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="961-d7-oB8"/>
+                            <constraint firstItem="fbn-17-m3b" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="PxK-pP-rju"/>
+                            <constraint firstItem="eI3-Go-8PS" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Ty6-aD-dxg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Z6Z-IO-IEO" secondAttribute="bottom" constant="24" id="ahZ-Yq-p1N"/>
+                            <constraint firstItem="mFA-mq-Jv6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="auj-Vi-0I3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fbn-17-m3b" secondAttribute="trailing" constant="24" id="cge-2C-3Ou"/>
+                            <constraint firstItem="fbn-17-m3b" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="24" id="dGJ-Wg-c0p"/>
+                            <constraint firstItem="Z6Z-IO-IEO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lih-6z-9oW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="mFA-mq-Jv6" secondAttribute="bottom" id="s82-nk-pom"/>
+                            <constraint firstItem="eI3-Go-8PS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vZN-gc-2f2"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="buttonOutlet" destination="Z6Z-IO-IEO" id="Hhx-AX-mx6"/>
+                        <outlet property="cardView" destination="eI3-Go-8PS" id="HBl-R7-3Wp"/>
+                        <outlet property="imageView" destination="c5O-QT-36A" id="f58-GT-pNS"/>
+                        <outlet property="label" destination="g69-Py-Ysa" id="ICW-2O-Gtb"/>
+                        <outlet property="likeDislikeImageView" destination="WwK-b4-yt6" id="i46-HH-bgf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="4mn-0p-n7N">
+                    <connections>
+                        <action selector="cardPan:" destination="BYZ-38-t0r" id="tqX-wf-ROf"/>
+                    </connections>
+                </panGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="104.8" y="129.08545727136433"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="background_space" width="750" height="1334"/>
+        <image name="like" width="250" height="250"/>
+    </resources>
+</document>
