@@ -33,15 +33,16 @@ class ViewController: RootViewController {
     }
     
     func resetCard() {
-        
-        self.label.text = ""
-        self.imageView.image = UIImage()
-        
         self.cardView.center = self.view.center
         UIView.animate(withDuration: 0.4) {
             self.cardView.alpha = 1
         }
         self.likeDislikeImageView.alpha = 0
+    }
+    
+    func clearCard() {
+        self.label.text = ""
+        self.imageView.image = UIImage()
     }
     
     func showMeme() {
@@ -110,6 +111,7 @@ class ViewController: RootViewController {
                     card.alpha = 0
                 }) { (done) in
                     if done {
+                        self.clearCard()
                         self.resetCard()
                         self.showMeme()
                     }
@@ -121,6 +123,7 @@ class ViewController: RootViewController {
                     card.alpha = 0
                 }) { (done) in
                     if done {
+                        self.clearCard()
                         self.resetCard()
                         self.showMeme()
                     }
@@ -135,19 +138,3 @@ class ViewController: RootViewController {
     }
     
 }
-
-//        networkManager.getRandomMeme(urlString: URL_RANDOM_MEME) { (meme, message) in
-//            if let meme = meme {
-//                self.imageView.sd_setImage(with: URL(string: meme.url)) { (image, error, completion, url) in
-//                    if let image = image{
-//                        self.imageView.image = image
-//                        self.label.text = meme.title
-//                    } else {
-//                        self.label.text = error?.localizedDescription
-//                    }
-//                }
-//                self.removeSpinner()
-//            } else {
-//                self.label.text = message!
-//            }
-//        }
