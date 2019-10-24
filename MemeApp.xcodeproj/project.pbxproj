@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D9529110235DE3EB00E57E54 /* StoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D952910F235DE3EB00E57E54 /* StoreManager.swift */; };
+		D96614F023606AAC0083FCB6 /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96614EF23606AAC0083FCB6 /* Presenter.swift */; };
 		D990184B2350ACA700605E12 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D990184A2350ACA700605E12 /* AppDelegate.swift */; };
 		D990184D2350ACA700605E12 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D990184C2350ACA700605E12 /* SceneDelegate.swift */; };
 		D990184F2350ACA700605E12 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D990184E2350ACA700605E12 /* ViewController.swift */; };
@@ -23,6 +25,8 @@
 /* Begin PBXFileReference section */
 		72EFD0173F7CA21DC3C4FF6D /* Pods_MemeApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MemeApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		970F3AB4673F5AEE1B7527A5 /* Pods-MemeApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MemeApp.release.xcconfig"; path = "Target Support Files/Pods-MemeApp/Pods-MemeApp.release.xcconfig"; sourceTree = "<group>"; };
+		D952910F235DE3EB00E57E54 /* StoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StoreManager.swift; path = MemeApp/Assets.xcassets/StoreManager.swift; sourceTree = SOURCE_ROOT; };
+		D96614EF23606AAC0083FCB6 /* Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
 		D99018472350ACA700605E12 /* MemeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MemeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D990184A2350ACA700605E12 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D990184C2350ACA700605E12 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -67,6 +71,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		D96614EE23606A630083FCB6 /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				D96614EF23606AAC0083FCB6 /* Presenter.swift */,
+			);
+			path = Presenters;
+			sourceTree = "<group>";
+		};
 		D990183E2350ACA700605E12 = {
 			isa = PBXGroup;
 			children = (
@@ -89,8 +101,9 @@
 			isa = PBXGroup;
 			children = (
 				D9918A992355B4250018D5C8 /* Managers */,
-				D9918A972355B4060018D5C8 /* Controllers */,
 				D9918A962355B3FA0018D5C8 /* Models */,
+				D96614EE23606A630083FCB6 /* Presenters */,
+				D9918A972355B4060018D5C8 /* Views */,
 				D990184A2350ACA700605E12 /* AppDelegate.swift */,
 				D990184C2350ACA700605E12 /* SceneDelegate.swift */,
 				D99018502350ACA700605E12 /* Main.storyboard */,
@@ -110,19 +123,20 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		D9918A972355B4060018D5C8 /* Controllers */ = {
+		D9918A972355B4060018D5C8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				D99018652350CF3D00605E12 /* RootViewController.swift */,
 				D990184E2350ACA700605E12 /* ViewController.swift */,
 			);
-			path = Controllers;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		D9918A992355B4250018D5C8 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
 				D99018612350AE5100605E12 /* NetworkManager.swift */,
+				D952910F235DE3EB00E57E54 /* StoreManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -242,11 +256,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D96614F023606AAC0083FCB6 /* Presenter.swift in Sources */,
 				D990184F2350ACA700605E12 /* ViewController.swift in Sources */,
 				D9918A9B2355E1DA0018D5C8 /* Meme.swift in Sources */,
 				D99018552350ACA700605E12 /* MemeApp.xcdatamodeld in Sources */,
 				D99018662350CF3D00605E12 /* RootViewController.swift in Sources */,
 				D99018622350AE5100605E12 /* NetworkManager.swift in Sources */,
+				D9529110235DE3EB00E57E54 /* StoreManager.swift in Sources */,
 				D990184B2350ACA700605E12 /* AppDelegate.swift in Sources */,
 				D990184D2350ACA700605E12 /* SceneDelegate.swift in Sources */,
 			);

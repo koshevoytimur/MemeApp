@@ -36,10 +36,10 @@ class RootViewController: UIViewController {
         spinnerBack.center = self.vSpinner.center
     }
     
-    func showSpinner(onView : UIView) {
+    func showSpinner() {
         activityIndicator?.startAnimating()
         DispatchQueue.main.async {
-            onView.addSubview(self.vSpinner)
+            self.view.addSubview(self.vSpinner)
         }
     }
     
